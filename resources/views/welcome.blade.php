@@ -29,18 +29,26 @@
 				<div class="py-12">
 			        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 						<div class="flex flex-col md:flex-row justify-evenly h-hs">
-							<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
-								3D Design
-							</div>
-							<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
-								2D Design
-							</div>
-							<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
-								Composer
-							</div>
-							<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
-								Voice Over
-							</div>
+							<a href="{{route('category')}}">
+								<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
+									3D Design
+								</div>
+							</a>
+							<a href="{{route('category')}}">
+								<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
+									2D Design
+								</div>
+							</a>
+							<a href="{{route('category')}}">
+								<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
+									Composer
+								</div>
+							</a>
+							<a href="{{route('category')}}">
+								<div class="bg-white w-full md:w-72 h-full flex justify-center items-center">
+									Voice Over
+								</div>
+							</a>
 						</div>
 			        </div>
 			    </div>

@@ -19,15 +19,15 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/category', function () {
     return view('category');
-});
+})->name('category');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/product', function () {
     return view('products');
-});
+})->name('products');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/product/1', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/product/{id}', function () {
     return view('products.show');
-});
+})->name('product');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

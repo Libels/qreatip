@@ -4,13 +4,15 @@
 			<div class="mx-auto  sm:pl-3 lg:pl-4">
 	            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
 					@for($i = 0; $i < 50; $i++)
-					<div class="bg-white sm:rounded-lg overflow-hidden shadow-md h-56 w-56 sm:h-44 sm:w-44 flex justify-center items-center">
-						Product {{ $i }}
-					</div>
+					<a href="{{ route('product', ['id' => $i]) }}">
+						<div class="bg-white sm:rounded-lg overflow-hidden shadow-md h-56 w-56 sm:h-44 sm:w-44 flex justify-center items-center">
+							Product {{ $i }}
+						</div>
+					</a>
 					@endfor
 	            </div>
 	        </div>
-			<div class="hidden sm:flex flex-col sticky top-0 right-0 bg-white w-56 h-screen">
+			<div class="hidden sm:flex flex-col sticky top-4 right-0 bg-white w-56 h-screen">
 				Sidebar
 				<div class="hidden sm:block">
 					sm
