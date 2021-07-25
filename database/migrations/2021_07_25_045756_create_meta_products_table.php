@@ -15,6 +15,9 @@ class CreateMetaProductsTable extends Migration
     {
         Schema::create('meta_products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('value');
+            $table->foreignId('product_id');
             $table->timestamps();
         });
     }
