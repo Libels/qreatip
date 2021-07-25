@@ -4,7 +4,7 @@
 			<div class="flex flex-col justify-between h-hs">
 				<div class="grid sm:grid-cols-2 w-full sm:gap-4">
 					@for($i = 0; $i < 8; $i++)
-					<a href="{{ route('products') }}">
+					<a href="{{ route('product.list') }}">
 						<div class="flex justify-center items-center sm:rounded-lg overflow-hidden shadow-md bg-white w-full h-24">
 							Sub-Category {{ $i }}
 						</div>

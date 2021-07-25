@@ -13,26 +13,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return view('welcome');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+	Route::get('/', function () {
+		return view('welcome');
+	})->name('root');
+
+	Route::get('/dashboard', function () {
+	    return view('dashboard');
+	})->name('dashboard');
+
+	Route::get('/category', function () {
+	    return view('category');
+	})->name('category');
+
+	Route::name('product.')->group(function () {
+		Route::prefix('product')->group(function () {
+			Route::get('/', function () {
+				return view('products');
+			})->name('list');
+
+			Route::get('/view/{id}', function ($id) {
+				return view('products.show', ['id' => $id]);
+			})->name('view');
+
+			Route::get('/create', function () {
+				return view('products.create');
+			})->name('create');
+
+			Route::get('/edit/{product}', function ($product) {
+				return view('products.edit', ['id' => $product]);
+			})->name('edit');
+		});
+	});
+
+	Route::get('/chat/{id}', function () {
+	    return view('chat');
+	})->name('chat');
 });
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/category', function () {
-    return view('category');
-})->name('category');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/product', function () {
-    return view('products');
-})->name('products');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/product/{id}', function () {
-    return view('products.show');
-})->name('product');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/chat/{id}', function () {
-    return view('chat');
-})->name('chat');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
