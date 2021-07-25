@@ -29,6 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/product/{id}', function (
     return view('products.show');
 })->name('product');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/chat/{id}', function () {
+    return view('chat');
+})->name('chat');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

@@ -6,7 +6,7 @@
 					<div class="bg-gray-300 h-96">
 						Showcase
 					</div>
-					<div class="bg-white p-3 h-48">
+					<div class="bg-white p-3 h-48 sm:rounded-lg shadow-md my-4">
 						<div class="flex space-x-4 items-center">
 							<button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
 								<img class="h-16 w-16 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
@@ -48,14 +48,33 @@
 					</div>
 
 				</div>
-				<div class="sticky top-4 bg-white h-96 w-1/5 sm:rounded-lg shadow-md border-gray-500 p-3">
+				<div class="sticky top-4 bg-white h-96 w-1/5 sm:rounded-lg shadow-md p-3">
 					<h1 class="font-bold text-right">Pilih Varian</h1>
-					<select required id="opsi" wire:model.defer="state.opsi" class="mt-1 block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-						<option selected="selected" disabled>Varian</option>
-						<option wire:key="0" value="0">Face</option>
-						<option wire:key="1" value="1">Half Body</option>
-						<option wire:key="2" value="2">Full Body</option>
-					</select>
+					<div class="">
+						<div class="flex space-x-3 items-center">
+							<x-jet-input type="radio" name="variant" id="va1" value="" />
+							<div class="">
+								<x-jet-label for="va1" class="font-bold">Face Only</x-jet-label>
+								<span class="text-gray-500">Hair to neck sketch</span>
+							</div>
+						</div>
+						<span class="block w-full h-0.5 bg-gray-50 my-2"></span>
+						<div class="flex space-x-3 items-center">
+							<x-jet-input type="radio" name="variant" id="va2" value="" />
+							<div class="">
+								<x-jet-label for="va1" class="font-bold">Half Body</x-jet-label>
+								<span class="text-gray-500">Head to waist sketch</span>
+							</div>
+						</div>
+						<span class="block w-full h-0.5 bg-gray-50 my-2"></span>
+						<div class="flex space-x-3 items-center">
+							<x-jet-input type="radio" name="variant" id="va3" value="" />
+							<div class="">
+								<x-jet-label for="va1" class="font-bold">Full Body</x-jet-label>
+								<span class="text-gray-500">Head to toe sketch</span>
+							</div>
+						</div>
+					</div>
 					<div class="font-extrabold text-center text-lg">
 						Rp. 169,1173.00
 					</div>
