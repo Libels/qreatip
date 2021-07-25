@@ -13,8 +13,25 @@
 						</div>
 					</div>
 
-					<div class="rounded-lg bg-gray-100 overflow-hidden shadow-md">
-						<div><img src="https://fabianoo.net/projects/assets/img/Sailor-Moon.jg"></div>
+					<div class="group flex relative rounded-lg bg-gray-100 overflow-hidden shadow-md items-center">
+						<div class="absolute bg-opacity-30 duration-75 group-hover:bg-opacity-100 bg-white rounded-full p-2 mx-2 left-0">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+							</svg>
+						</div>
+						<div style="background-image: url(https://fabianoo.net/projects/assets/img/Sailor-Moon.jg); height: 500px;" class="w-full bg-cover flex justify-center items-end">
+							<div class="flex space-x-2 py-4">
+								<span class="block bg-white h-4 w-4 bg-opacity-30 group-hover:bg-opacity-100 duration-75 rounded-full"></span>
+								<span class="block bg-gray-400 h-4 w-4 bg-opacity-30 group-hover:bg-opacity-100 duration-75 rounded-full"></span>
+								<span class="block bg-gray-400 h-4 w-4 bg-opacity-30 group-hover:bg-opacity-100 duration-75 rounded-full"></span>
+								<span class="block bg-gray-400 h-4 w-4 bg-opacity-30 group-hover:bg-opacity-100 duration-75 rounded-full"></span>
+							</div>
+						</div>
+						<div class="absolute bg-opacity-30 duration-75 group-hover:bg-opacity-100 bg-white rounded-full p-2 mx-2 right-0">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+							</svg>
+						</div>
 					</div>
 
 					<div class="bg-white p-3 h-auto sm:rounded-lg shadow-md my-4">
@@ -99,14 +116,14 @@
 							</x-jet-button>
 						</div>
 						<span class="block w-full h-0.5 bg-gray-200 my-4"></span>
-						<div class="flex border-gray-50 text-sm -my-3 items-center justify-evenly space-x-2">
-							<div class="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+						<div class="flex border-gray-50 text-sm -mt-3 items-center justify-evenly space-x-2">
+							<div class="flex items-center space-x-2 p-2 rounded-md duration-75 hover:bg-gray-100">
 								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
 								</svg>
 								<span>Wishlist</span>
 							</div>
-							<div class="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+							<div class="flex items-center space-x-2 p-2 rounded-md duration-75 hover:bg-gray-100">
 								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
 								</svg>
