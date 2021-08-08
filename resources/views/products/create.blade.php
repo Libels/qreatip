@@ -7,11 +7,11 @@
 
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-            @if (Laravel\Fortify\Features::canUpdateProfileInformation())
-                @livewire('add-product')
+			@livewire('add-product')
 
-                <x-jet-section-border />
-            @endif
+			<x-jet-section-border />
+
+			@livewire('product-image')
         </div>
     </div>
 </x-app-layout>

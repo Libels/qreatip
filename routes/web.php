@@ -46,6 +46,26 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 		});
 	});
 
+	Route::name('invoice.')->group(function () {
+		Route::prefix('invoice')->group(function () {
+			Route::get('/', function () {
+				return view('invoices');
+			})->name('list');
+
+			Route::get('/view/{id}', function ($id) {
+				return view('invoices.show', ['id' => $id]);
+			})->name('view');
+
+			Route::get('/create', function () {
+				return view('invoices.create');
+			})->name('create');
+
+			Route::get('/edit/{invoice}', function ($product) {
+				return view('products.edit', ['id' => $product]);
+			})->name('edit');
+		});
+	});
+
 	Route::get('/chat/{id}', function () {
 	    return view('chat');
 	})->name('chat');

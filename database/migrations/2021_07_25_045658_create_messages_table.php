@@ -15,9 +15,9 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-			$table->string('uuid')->unique();
 			$table->string('message');
 			$table->foreignId('user_id');
+			$table->foreignId('chatroom_id');
             $table->timestamps();
         });
     }
