@@ -58,9 +58,11 @@ class ProductImage extends Component
 	public function updatedFiles()
     {
 		$this->validate([
-            'files' => 'image|max:1024', // 1MB Max
+            'files.*' => 'image|max:1024', // 1MB Max
         ]);
 
-        $this->files->store('thumbnail');
+        foreach ($this->files as $file) {
+        	$file->storePublicly('thumbnail');
+        }
     }
 }
